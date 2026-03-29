@@ -581,10 +581,10 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <div class="hero-badge">Available — Final Year Internship</div>
+    <div class="hero-badge">Engineering Intern @ ip-label</div>
     <h1>Mahdi<br><span class="line2">Chabbouh</span></h1>
     <p class="hero-desc">
-      Full Stack JS Developer with 2+ years of experience building complex web applications. Currently completing my Engineering diploma at ESPRIT, passionate about turning business challenges into scalable software.
+      Full Stack JS Developer with 2+ years of experience building complex web applications. Currently completing my Engineering diploma at ESPRIT as a final year intern at ip-label, passionate about turning business challenges into scalable software.
     </p>
     <div class="hero-cta">
       <a href="/cdn-cgi/l/email-protection#ea878b828e8389828b8888859f82d3d2aa8d878b8386c4898587" class="btn btn-primary">
@@ -612,7 +612,7 @@
         <div class="t-out">mahdi_chabbouh</div>
         <div><span class="t-prompt">~</span> <span class="t-cmd">cat profile.json</span></div>
         <div><span class="t-key">"role"</span>: <span class="t-out">"Full Stack Developer"</span></div>
-        <div><span class="t-key">"status"</span>: <span style="color:var(--accent)">"Final Year Intern"</span></div>
+        <div><span class="t-key">"status"</span>: <span style="color:var(--accent)">"Intern @ ip-label"</span></div>
         <div><span class="t-key">"location"</span>: <span class="t-out">"Ariana, Tunisia"</span></div>
         <div><span class="t-key">"experience"</span>: <span class="t-out">"2+ years"</span></div>
         <div><span class="t-key">"stack"</span>: <span class="t-out">["React","Angular","Node","Java"]</span></div>
@@ -854,7 +854,15 @@
   <span>Ariana, Tunisia — Engineering Intern @ ip-label</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) =>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
