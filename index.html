@@ -465,6 +465,68 @@
   }
   .edu-detail { color: var(--text-dim); font-size: 13px; }
 
+  /* PROJECTS */
+  #projects {
+    padding: 100px 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .project-card:hover { border-color: var(--accent); background: rgba(127,255,110,0.02); }
+
+  .project-name {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .project-desc {
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.8;
+    flex: 1;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border-radius: 1px;
+  }
+  .project-link:hover { border-color: var(--accent2); color: var(--accent2); }
+  .project-link svg { width: 12px; height: 12px; }
+
   /* CONTACT */
   #contact {
     padding: 100px 48px;
@@ -572,6 +634,7 @@
   <div class="nav-logo">MC<span>.</span></div>
   <div class="nav-links">
     <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
@@ -822,22 +885,104 @@
 </section>
 
 <!-- CONTACT -->
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-num">04 / Projects</span>
+    <h2 class="section-title">Featured Work</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal">
+      <div class="project-name">Street League</div>
+      <div class="tech-pills" style="margin-bottom:4px">
+        <span class="pill">Angular</span>
+        <span class="pill">Spring Boot</span>
+        <span class="pill blue">MongoDB</span>
+        <span class="pill blue">MySQL</span>
+        <span class="pill blue">Docker</span>
+        <span class="pill blue">Keycloak</span>
+        <span class="pill">Microservices</span>
+      </div>
+      <p class="project-desc">A platform that simplifies the organisation and management of non-professional sports activities. Allows amateur players to register, join or create teams, find teammates, organise training sessions and participate in local competitions. Also includes tools for managing coaches, sponsors and sports events.</p>
+      <div class="project-links">
+        <a href="https://github.com/Mahdi1920/PI_Dev.git" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Backend
+        </a>
+        <a href="https://github.com/Mahdi1920/PI_Dev_Frontend.git" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Frontend
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-name">TirFly</div>
+      <div class="tech-pills" style="margin-bottom:4px">
+        <span class="pill">Angular</span>
+        <span class="pill">Tailwind</span>
+        <span class="pill blue">NodeJS</span>
+        <span class="pill blue">ExpressJS</span>
+        <span class="pill blue">MongoDB</span>
+      </div>
+      <p class="project-desc">An innovative tourist web application designed to offer an immersive and practical experience to travellers seeking unique adventures and unforgettable discoveries.</p>
+      <div class="project-links">
+        <a href="https://github.com/Mahdi1920/backend.git" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Backend
+        </a>
+        <a href="https://github.com/Mahdi1920/frontoffice.git" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Frontend
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-name">FitManage</div>
+      <div class="tech-pills" style="margin-bottom:4px">
+        <span class="pill">JavaFX</span>
+        <span class="pill">Codename One</span>
+        <span class="pill blue">Java</span>
+        <span class="pill blue">MySQL</span>
+        <span class="pill">CSS</span>
+      </div>
+      <p class="project-desc">A management application dedicated to gyms, designed to centralise and automate administrative and organisational operations — covering memberships, members, classes, coaches, products and events.</p>
+      <div class="project-links">
+        <a href="https://github.com/Mahdi1920/PIProject.git" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Desktop
+        </a>
+        <a href="https://github.com/Mahdi1920/ProjectCodenameone.git" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Mobile
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner reveal">
     <h2 class="contact-title">Let's<br><span>Connect</span></h2>
-    <p class="contact-sub">Open to final year internship opportunities. Let's build something great together.</p>
+    <p class="contact-sub">Open to remote Full Stack Developer opportunities. Let's build something great together.</p>
 
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#fc919d9498959f949d9e9e938994c5c4bc9b919d9590d29f9391" class="contact-link">
+      <a href="mailto:mahdichabbouh98@gmail.com" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <span class="__cf_email__" data-cfemail="a2cfc3cac6cbc1cac3c0c0cdd7ca9b9ae2c5cfc3cbce8cc1cdcf">[email&#160;protected]</span>
+        mahdichabbouh98@gmail.com
       </a>
       <a href="https://www.linkedin.com/in/mahdi-chabbouh-a47144200" target="_blank" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
       <a href="https://github.com/Mahdi1920" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.87 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         GitHub
       </a>
       <a href="tel:+21628249582" class="contact-link">
